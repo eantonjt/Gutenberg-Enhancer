@@ -1,0 +1,205 @@
+body {
+    background-color: #efefef;
+    color: #1b1b1b;
+    /* margin: 0; */
+  
+}
+
+#scrollingContainer {
+  transition: transform 100s; 
+  overflow-anchor: auto;
+}
+
+
+.outer {
+    display: table;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .middle {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+  .inner {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60vw;
+
+    /* Whatever width you want */
+  }
+
+#pluginBottomMenu { 
+    height: 40px; 
+    position: fixed; 
+    bottom:0%;
+    width:100vw; 
+    background: rgba(0,0,0,0.0);
+    opacity: 0;
+    z-index: 1000;
+}
+
+/* #info:hover {
+    opacity: 1;
+  } */
+
+
+  /* input[type="number"] {
+    -webkit-appearance: textfield;
+       -moz-appearance: textfield;
+            appearance: textfield;
+  }
+  input[type=number]::-webkit-inner-spin-button, 
+  input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+  } */
+
+.hejsan {
+    float: left;
+    clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+    margin: 20px;
+    width: 600px;
+    height: 400px;
+    transition: 0.5s;
+}
+
+.hejsan:hover {
+clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+}
+
+.bottom-right {
+    position: fixed;
+    bottom: 10%;
+    right: 20px;
+    background-color: #4f5072;
+    color: #fff;
+    padding: 5px;
+    width: 18vw;
+    height: 85%;
+    min-width: 200px;
+    min-height: 200px;
+    /* transition: opacity 200ms, display 800ms, width 400ms, height 400ms; */
+    /* opacity: 1; */
+    display: none;
+    overflow-y: auto;
+    padding-top: 1em;
+    border-radius: 0.5em;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    scrollbar-gutter: stable;
+  }
+
+
+.grid-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.grid-item {
+  text-align: center;
+}
+
+.settingsBtn {
+  display: flex;
+  background-color: #3f3f5b; 
+  padding: 7px;
+  height: 2em;
+  width: 95%;
+  margin: 0 auto;
+  margin-bottom: 0.2em;
+}
+
+.settingsBtnDivider {
+  width: 48%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.rightAligned {
+  text-align: right;
+}
+
+.rightAlignedInput {
+  flex-direction: row;
+  text-align: right;
+  justify-content: flex-end;
+}
+
+.settingsBtnOpen {
+  display: flex;
+  background-color: black; 
+  padding: 5px;
+  user-select: none;
+  cursor: pointer;
+}
+
+
+/* .settingsBtn:hover {
+  background-color: #999;
+} */
+
+.whiteModeColorScheme {
+  background-color: white;
+  color: black;
+}
+
+.darkModeColorScheme {
+  background-color: black;
+  color: white;
+}
+
+
+
+.accordion {
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #1b1b28; 
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: #3f3f5b;
+  margin: 5px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+
+.customColorlabel {
+  text-align:right; 
+}
+.customColorInput {
+  
+}
+
+.customColorSettings {
+  display:grid;
+    grid-template-columns: max-content max-content;
+    grid-gap:5px;
+}
+
+input[type=color]{
+	width: 40px;
+	height: 40px;
+	border: none;
+	border-radius: 40px;
+	background: none;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+	border: solid 1px #000; /*change color of the swatch border here*/
+	border-radius: 40px;
+}

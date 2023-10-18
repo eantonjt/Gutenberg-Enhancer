@@ -1,0 +1,43 @@
+{
+    "manifest_version": 3,
+    "name": "Gutenberg Enhancer",
+    "description": "Adds extra display functionality and autoplay to the HTML books on Project Gutenberg.",
+    "version": "1.0",
+    "icons": {
+      "16": "images/icon-16x16.png",
+      "48": "images/icon-48x48.png",
+      "128": "images/icon-128x128.png"
+    },
+    "action": {
+        "default_icon": {
+          "16": "images/icon-16x16.png",
+          "48": "images/icon-48x48.png",
+          "128": "images/icon-128x128.png"
+        }
+      },
+    "host_permissions": [
+    "https://www.gutenberg.org/"
+    ],
+    "permissions": ["tabs", "scripting", "storage"],
+    "content_scripts": [
+        {
+          "matches": [
+            "https://www.gutenberg.org/cache/epub/*"
+          ],
+          "js": ["scripts/scrollingBook.js", "scripts/mainPanelGUIElements.js"],
+          "css":        ["css/styles.css"],
+          "run_at": "document_end",
+          "all_frames": true
+        }
+      ],
+      "web_accessible_resources": [{
+        "resources": [ "images/bottomMenu/fullscreenwhite.png", 
+                       "images/bottomMenu/playwhite.png",
+                       "images/bottomMenu/rewindwhite.png",
+                       "images/bottomMenu/settingswhite.png",
+                       "images/bottomMenu/smallscreenwhite.png",
+                       "images/bottomMenu/stopwhite.png"],
+        "matches": [ "https://www.gutenberg.org/*" ]
+      }]
+  }
+
