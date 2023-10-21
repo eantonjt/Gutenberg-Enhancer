@@ -223,7 +223,6 @@ class bottomMenuGuiFactory {
 
         displayCheck1 = this.iterationsUntilMenuDisappears.hideMenu() ? false : displayCheck1
         const menuElem = document.getElementById(this.cfg.menuId)
-        //console.log(menuElem)
         if (displayCheck1 || displayCheck2 || displayCheck3) {
 
             
