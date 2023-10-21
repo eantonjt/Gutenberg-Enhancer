@@ -8,6 +8,7 @@ This plugin is meant to add this functionality to HTML books on [Project Gutenbe
 * Easily change display settings for the book, like font-size, background color, margins etc
 * Chapter markings to easily go between chapters
 * Just provide a more pleasant reading experience in general
+
 A description of the thoughts and solutions that I had when I made this project can be found here LINK.
 
 ## Installation instructions
