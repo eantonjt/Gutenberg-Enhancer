@@ -9,7 +9,7 @@ This plugin is meant to add this functionality to HTML books on [Project Gutenbe
 * Chapter markings to easily go between chapters
 * Just provide a more pleasant reading experience in general
 
-A video showcasing the functionality of the plugin can be found here https://www.youtube.com/embed/SD90Y-qBpKI?si=Ux8g1sLAc36jXYWI
+A video showcasing the functionality of the plugin can be found [here](https://www.youtube.com/watch?v=SD90Y-qBpKI)
 
 ## Installation instructions
 1. Download the project
