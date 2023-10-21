@@ -16,6 +16,7 @@ A description of the thoughts and solutions that I had when I made this project 
 3. Activate "Developer mode" in the top right
 4. Press the "Load unpacked" button
 5. Select the folder where you downloaded the project files.
+
 The plugin should now be activated, if you navigate to any HTML book on [Project Gutenberg](https://www.gutenberg.org/) (like [Meditations](https://www.gutenberg.org/cache/epub/2680/pg2680-images.html) for example) you will see that the plugin is now active.
 
 ## Code
