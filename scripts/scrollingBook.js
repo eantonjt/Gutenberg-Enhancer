@@ -45,7 +45,6 @@ class scrollingBook {
             allTagClasses = allTagClasses.map(it => it.toLowerCase())
             let isChapterTag = searchClassList.some(it => allTagClasses.includes(it))
             if (isChapterTag) {
-                //console.log(allTags[i])
                 let chapterPosTop = allTags[i].getBoundingClientRect().top
                 // Aim to put the chapter in the middle of the screen
                 let chapterPos = chapterPosTop - screen.height/2
@@ -88,7 +87,6 @@ class scrollingBook {
 
     bookCompletionPercentage() { 
         var elem = document.getElementById("fullBookContainerPlugin")
-        //console.log("Bounding box", elem.getBoundingClientRect().height)
         let completionPercentage = (this.bookSettings.currBookPos / elem.getBoundingClientRect().height) * 100
         return completionPercentage
     }
@@ -105,8 +103,6 @@ class scrollingBook {
             this.bookSettings.currBookPos += this.bookSettings.currentSpeed
             elem.style.transition = "transform " + this.bookSettings.transitionDuration + "s" + " linear"
             elem.style.transform = "translateY(" + (-this.bookSettings.currBookPos) + "px" + ")"
-            console.log(this.bookSettings.currBookPos)
-            // Need some max check here as well maybe? SO it does not go off screen sort of?
 
         }, this.bookSettings.intervalTime);
 
@@ -131,7 +127,6 @@ class scrollingBook {
 
         clearInterval(this.bookSettings.intervalId)
         this.bookSettings.bookPosBeforeRewind = this.bookSettings.currBookPos
-        console.log(this.bookSettings.currBookPos, "bookpos")
         if (!this.bookSettings.currentlyRewinding) {
             this.bookSettings.currentlyRewinding = true
             this.bookSettings.intervalId = setInterval(() => { 
